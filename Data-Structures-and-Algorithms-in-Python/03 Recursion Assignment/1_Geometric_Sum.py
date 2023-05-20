@@ -19,3 +19,24 @@
 # 1.93750
 # Explanation for Sample Input 1:
 # 1+ 1/(2^1) + 1/(2^2) + 1/(2^3) = 1.87500
+
+
+from math import *
+from collections import *
+from sys import *
+from os import *
+
+## Read input as specified in the question.
+## Print output as specified in the question.
+
+def geometricSum(n):
+    if n<0:
+        return 0
+    return 1/(2**n)  + geometricSum(n-1)
+n=int(input())
+print("%.5f"%geometricSum(n))
+
+
+
+
+
